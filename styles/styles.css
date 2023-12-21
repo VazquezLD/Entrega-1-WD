@@ -9,12 +9,15 @@
 }
 body{
     background-color: var(--negro);
+    overflow-x: hidden;
 }
 h1{
     color: aliceblue;
     max-width: 900px;
     margin-left: 90px;
     font-size: 50px;
+    animation-name: animacionInicial;
+    animation-duration: 1.5s;
 }
 
 /* VARIABLES */
@@ -26,10 +29,8 @@ h1{
 
 /*----------------------ESTILOS NAVBAR----------------------*/
 .navbar{
-    background-color: var(--negro);
-    position: fixed;
     width: 100vw;
-    height: 55px;
+    height: 80px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -64,7 +65,7 @@ h1{
 }
 .nav-list2{
     display: flex;
-    margin-right: 20px;
+    margin-right: 40px;
     gap: 20px;
 }
 .nav-button{
@@ -72,12 +73,11 @@ h1{
     color: aliceblue;
     padding: 5px 3px 5px 3px;
     background:linear-gradient(45deg, #e63307, rgb(131, 7, 202));
-    border-radius: 10px;
+
 }
 .word{
     background-color: var(--negro);
     padding: 4px 10px 4px 10px;
-    border-radius: 10px;
     font-weight: 300;
     font-size: 15px;
 }
@@ -96,14 +96,27 @@ h1{
     align-items: center;
     justify-content: flex-start;
     width: 100%;
-    height: 100vh;
+    height: 91vh;
 }
 .hero1{
     height: 100%;
     display: flex;
     align-items: center;
     justify-content: flex-start;
-
+}
+.bg-hero{
+    background-color: transparent;
+}
+.backimage-hero{
+    animation-name: animacionInicial3;
+    animation-duration: 1s;
+}
+.descrip{
+    color: aliceblue;
+    max-width: 800px;
+    font-weight: 200;
+    animation-name: animacionInicial2;
+    animation-duration: 1.5s;
 }
 .content-hero{
     display: flex;
@@ -111,15 +124,30 @@ h1{
     align-items: center;
     justify-content: flex-end;
     gap: 40px;
-    position: relative;
     padding-bottom: 70px;
 }
+@keyframes animacionInicial2{
+    0%{
+        transform: translateX(100px);
+    }
+}
+@keyframes animacionInicial{
+    0%{
+        transform: translateX(-200px);
+    }
+}
+@keyframes animacionInicial3{
+    0%{
+        transform: translateY(300px);
+    }
+}
 .button-section{
-    position: absolute;
     display: flex;
     gap: 20px;
     right: 170px;
     bottom: 0;
+    animation-name: animacionInicial2;
+    animation-duration: 1.5s;
 }
 .excep{
     background:linear-gradient(45deg, #e63307, rgb(131, 7, 202));
@@ -147,29 +175,104 @@ h1{
     transform:translateX(-20px);
 }
 
-.seccioneshero{
-    padding: 15px;
-    position: absolute;
-    right: 50px;
-    display: grid;
-   grid-template-columns: repeat(3, 1fr);
-   grid-auto-rows: 300px;
-   grid-auto-columns: 500px;
-   gap: 20px;
+
+/*----------------------ESTILOS CARDS----------------------*/
+.cards-section{
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-image: linear-gradient(#0f0f0f 2px, transparent 2px), linear-gradient(to right, #0f0f0f 2px, transparent 2px);
+    background-size: 32px 32px;
+    background-color: var(--negro);
+    gap: 40px;
+    margin-bottom: 200px;
 }
-.secciones-grid:nth-child(4){
-    width: 510px;
-    grid-column-start: 1;
-    grid-column-end: 3;
+.card-reason{
+    height: 400px;
+    width: 300px;
+    background-color: #181818c7;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    transition: all 0.3s ease-in-out;
 }
-.secciones-grid:nth-child(3){
-    height: 610px;
-    grid-column-start: 3;
-    grid-row-end: 2;
+.card-reason:hover{
+    transform: translateY(-15px);
+}
+.whyus{
+    text-align: center;
+    color: aliceblue;
+    font-size: 30px;
+    max-width: 800px;
+}
+.under-p{
+    color: rgb(182, 182, 182);
+    font-weight: 200;
+}
+.card-container{
+    display: flex;
+    gap: 100px;
+    margin-top: 40px;
+}
+.card-icon{
+    width: 80px;
+}
+.reasons{
+    color: aliceblue;
+    text-align: center;
+    font-weight: 300;
+    max-width: 300px;
+    padding-left: 20px;
+    padding-right: 20px;
+    line-height: 30px;
 }
 
-.secciones-grid{
-    background-color: rgb(29, 33, 36);
-    border-radius: 10px;
-    width: 250px;
+
+/*----------------------ESTILOS MOTIVOS----------------------*/
+
+.section-motivos{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    justify-content: center;
+    align-items: center;
+}
+.porcentajes{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    justify-content: center;
+    background-color: #111111;
+    padding: 80px;
+    border-radius: 20px;
+}
+.tasas{
+    font-size: 80px;
+    font-weight: 800;
+}
+.tasa1{
+    background:linear-gradient(45deg, #0063d4, rgb(131, 7, 202));
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    border-right: 3px solid rgb(68, 68, 68);
+    padding-right: 15px;
+}
+.tasa2{
+    background:linear-gradient(45deg, #00da74, rgb(4, 138, 248));
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    padding-left: 10px;
+}
+.descripcion{
+    color: aliceblue;
+    text-align: center;
+    max-width: 200px;
+    font-weight: 200;
 }
