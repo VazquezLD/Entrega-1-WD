@@ -14,8 +14,8 @@ body{
 h1{
     color: aliceblue;
     max-width: 900px;
-    margin-left: 90px;
-    font-size: 50px;
+    padding-left: 100px;
+    font-size: 45px;
     animation-name: animacionInicial;
     animation-duration: 1.5s;
 }
@@ -113,6 +113,7 @@ h1{
 }
 .descrip{
     color: aliceblue;
+    padding-left: 65px;
     max-width: 800px;
     font-weight: 200;
     animation-name: animacionInicial2;
@@ -164,15 +165,19 @@ h1{
 .button1{
     background:linear-gradient(45deg, #e63307, rgb(131, 7, 202));
     color: aliceblue;
-    transition: all 1s ease;
+    transition: all 0.3s ease;
 }
 .button2{
     background-color: var(--negro);
     border: 1px solid rgb(204, 204, 204);
     color: rgb(235, 235, 235);
+    transition: all 0.3s ease-in-out;
 }
 .button1:hover{
     transform:translateX(-20px);
+}
+.button2:hover{
+    transform: translateX(10px);
 }
 
 
@@ -183,11 +188,13 @@ h1{
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    background-image: linear-gradient(#0f0f0f 2px, transparent 2px), linear-gradient(to right, #0f0f0f 2px, transparent 2px);
+    background-image: linear-gradient(#0f0f0f 2px, transparent 2px), linear-gradient(to right, #141414 2px, transparent 2px);
     background-size: 32px 32px;
     background-color: var(--negro);
     gap: 40px;
-    margin-bottom: 200px;
+    margin-bottom: 100px;
+    padding-top: 50px;
+    padding-bottom: 100px;
 }
 .card-reason{
     height: 400px;
@@ -241,6 +248,8 @@ h1{
     gap: 40px;
     justify-content: center;
     align-items: center;
+    margin-bottom: 200px;
+
 }
 .porcentajes{
     display: flex;
@@ -275,4 +284,170 @@ h1{
     text-align: center;
     max-width: 200px;
     font-weight: 200;
+}
+
+/*----------------------ESTILOS FOOTER----------------------*/
+
+.footer{
+    display: flex;
+    color: #0f0f0f;
+    bottom: 0;
+    width: 100vw;
+    padding: 30px;
+    border-top: 1px solid rgb(36, 36, 36); 
+    justify-content: space-evenly;
+}
+.firstcont{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    max-width: 190px;
+}
+.secondcont{
+    padding-right: 100px;
+}
+.veriff{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    gap: 10px;
+}
+.descverif{
+    color: aliceblue;
+    font-weight: 200;
+    font-size: 15px;
+    padding-left: 30px;
+}
+.footer-section-title{
+    padding-bottom: 10px;
+}
+.footer-section{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.listas-secundarias-footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    list-style: none;
+}
+.linksfooter a{
+    color: aliceblue;
+    font-weight: 200;
+    text-decoration: none;
+}
+
+
+
+
+/*----------------------ESTILOS PLANES (NO SOCIALES)----------------------*/
+
+.planes-section{
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 300px;
+    
+}
+.planes-container{
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+}
+.plancard{
+    height: 600px;
+    width: 500px;
+    border-radius: 20px;
+    background-color: #141516;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    gap: 30px;
+    padding-top: 10px;
+}
+.titulos-planes{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: aliceblue;
+    font-size: 30px;
+    width: 100%;
+    height: 60px;
+    text-align: center;
+    border-bottom: 1px solid rgb(109, 109, 109);
+}
+.tiempo{
+    display: flex;
+    margin-top: 20px;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 50px;
+    background:linear-gradient(45deg, #e63307, rgb(131, 7, 202));
+    color: aliceblue;
+    border-radius: 10px;
+}
+.tiempo-free{
+    display: flex;
+    margin-top: 20px;
+    justify-content: center;
+    align-items: center;
+    width: 55%;
+    height: 50px;
+    background-color: #222324;
+    border: 1px solid aliceblue;
+    color: aliceblue;
+    border-radius: 10px;
+    
+}
+.precio{
+    color: aliceblue;
+    font-size: 60px;
+    font-weight: bold;
+}
+#ofert-icon{
+    width: 50px;
+    margin-left: 10px;
+}
+.check-icon{
+    width: 25px;
+}
+.content-planes{
+    color: aliceblue;
+    list-style: none;
+    font-weight: 200;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.content-planes li{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+.botones-plan{
+    padding: 8px 20px 8px 20px;
+    border-radius: 10px;
+    background-color: #141516;
+    color: aliceblue;
+    border-color: #039953;
+    cursor: pointer;
+}
+.botones-plan:hover{
+    box-shadow: -1px 0px 36px 0px rgba(3,153,83,0.75);
+    -webkit-box-shadow: -1px 0px 36px 0px rgba(3,153,83,0.75);
+    -moz-box-shadow: -1px 0px 36px 0px rgba(3,153,83,0.75);
+}
+#canceled{
+    text-decoration: line-through;
+    color: #e634079f;
 }
